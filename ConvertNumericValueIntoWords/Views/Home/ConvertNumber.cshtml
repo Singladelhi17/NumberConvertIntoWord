@@ -1,0 +1,29 @@
+﻿@model ConvertNumericValueIntoWords.Models.NumberConvertorVM
+
+@{
+    ViewBag.Title = "ConvertNumber";
+}
+
+<h2>Number Convert Into Word</h2>
+
+<p>
+    @Html.ActionLink("Convert New Number", "NumberConvertor")
+</p>
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.PersonName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.PersonName)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NumberInWord, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.NumberInWord)
+        </div>
+    </div>
+</div>
+
